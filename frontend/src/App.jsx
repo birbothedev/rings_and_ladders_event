@@ -1,27 +1,21 @@
-import { useState } from 'react'
-import { MapInteractionCSS } from 'react-map-interaction'
-import { GameBoard } from './components/GameBoard.jsx'
+import { NavBar } from './components/NavBar'
+import { Routes, Route, BrowserRouter } from "react-router-dom"
+import { HomePage } from './pages/HomePage'
+import { TeamPage } from './pages/TeamPage'
+import { AdminPage } from './pages/AdminPage'
 
 function App() {
-  const [mapState, setMapState] = useState({
-    scale: 1,
-    translation: { x: 0, y: 0 }
-  })
-
   return (
   <>
-    <div className="w-screen h-screen overflow-hidden">
-      <MapInteractionCSS
-        value={mapState}
-        onChange={(value) => setMapState(value)}
-        minScale={0.25}
-        maxScale={2.0}
-      >
-        <div><GameBoard /></div>
-      </MapInteractionCSS>
-    </div>
+  <BrowserRouter>
+    <NavBar />
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/teampage" element={<TeamPage />} />
+      <Route path="/adminpage" element={<AdminPage />} />
+    </Routes>
+  </BrowserRouter>
   </>
-    
   )
 }
 

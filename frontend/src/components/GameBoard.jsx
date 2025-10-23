@@ -1,4 +1,4 @@
-import { Tile } from "./Tile";
+import { Tile } from "./helpers/Tile"
 
 export function GameBoard(){
     const boardPieces = [
