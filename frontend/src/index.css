@@ -1,8 +1,22 @@
+@import "tailwindcss";
+
+@theme {
+  --color-darkblue: hsl(240 98% 5%);
+  --color-text: hsl(222 100% 100%);
+  --color-textmuted: hsl(222 77% 76%);
+  --color-highlight: hsl(223 46% 46%);
+  --color-border: hsl(224 57% 35%);
+  --color-bordermuted: hsl(227 76% 24%);
+  --color-primary: hsl(222 100% 78%);
+  --color-secondary: hsl(42 64% 55%);
+  --color-danger: hsl(8 68% 66%);
+  --color-warning: hsl(52 59% 44%);
+  --color-success: hsl(152 45% 49%);
+  --color-info: hsl(217 80% 68%);
+}
 
 :root {
   --bg-dark: hsl(240 98% 5%);
-  --bg: hsl(231 90% 8%);
-  --bg-light: hsl(224 73% 12%);
   --text: hsl(222 100% 100%);
   --text-muted: hsl(222 77% 76%);
   --highlight: hsl(223 46% 46%);
@@ -23,7 +37,3 @@ body {
   background-color: var(--bg-dark);
   color: var(--text);
 }
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
