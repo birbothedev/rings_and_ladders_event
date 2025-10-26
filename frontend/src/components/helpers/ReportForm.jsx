@@ -2,6 +2,7 @@ import { useState } from "react"
 
 export function ReportForm({ isOpen, onClose }){
     const [formContent, setFormContent] = useState({
+        username: "",
         subject: "",
         description: "",
     })
@@ -42,6 +43,23 @@ export function ReportForm({ isOpen, onClose }){
                 <div className="bg-border/20 p-4 rounded-2xl flex flex-col gap-4">
                     <div className="py-4 px-4 pl-1 rounded-full text-3xl font-bold">Report an Issue</div>
                     <form className="border-bordermuted border-3 rounded-2xl p-4 text-md flex flex-col gap-4">
+                        <>
+                            <label className="flex justify-between items-center gap-2">
+                                <span>Discord Username:</span>
+                                <span className="text-sm text-gray-500">
+                                    {formContent.username.length}/{shortlimit}
+                                </span>
+                            </label>
+                            <input 
+                                className="border-bordermuted border rounded-2xl p-3" 
+                                type="text"
+                                maxLength={shortlimit}
+                                name="username"
+                                placeholder="Username to reach you for more information if needed"
+                                value={formContent.username}
+                                onChange={handleChange}
+                            />
+                        </>
                         <>
                             <label className="flex justify-between items-center gap-2">
                                 <span>Subject:</span>
