@@ -28,6 +28,9 @@
   --warning: hsl(52 59% 44%);
   --success: hsl(152 45% 49%);
   --info: hsl(217 80% 68%);
+
+  width: 100%;
+  min-height: 100vh;
 }
 
 body {

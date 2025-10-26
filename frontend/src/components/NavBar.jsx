@@ -1,3 +1,5 @@
+import { ReportForm } from "./helpers/ReportForm"
+import { useState } from "react"
 
 const listItems = [
     {title: 'Home', link: "/"},
@@ -6,21 +8,31 @@ const listItems = [
 ]
 
 export function NavBar(){
+    const [openForm, setOpenForm] = useState(false);
+
     return (
-            <div className="fixed bg-border/30 flex justify-between items-center gap-16 py-3 px-10 left-1/2 translate-x-[-50%] top-5 rounded-full backdrop-blur-md shadow-lg z-100"
+        <>
+        <div className="fixed bg-border/30 flex justify-between items-center gap-16 py-3 px-10 left-1/2 translate-x-[-50%] top-5 rounded-full backdrop-blur-md shadow-lg z-100"
             >
                 <ul className="flex gap-8 text-xl">
                     {listItems.map((item) => (
-                        <li className="relative group cursor-pointer " key={item}>
+                        <li className="relative group cursor-pointer " key={item.title}>
                             <a href={item.link}>{item.title}</a> 
                             <span className="absolute left-0 bottom-[-5px] w-0 h-1 rounded-xl bg-linear-to-l from-success to-info transition-all duration-300 group-hover:w-full "></span>
                         </li>
                     ))}
                 </ul>
 
-                <button className="bg-linear-to-l from-bordermuted to-border py-1 px-6 rounded-full shadow-xl text-lg hover:from-success hover:to-info hover:shadow-success/10 font-semibold hover:text-darkblue cursor-pointer" >
+                <button 
+                    className="bg-linear-to-l from-bordermuted to-border py-1 px-6 rounded-full shadow-xl text-lg hover:from-success hover:to-info hover:shadow-success/10 font-semibold hover:text-darkblue cursor-pointer" 
+                    onClick={() => setOpenForm(true)}
+                >
                     Report an Issue
-                </button>
+                </button>    
             </div>
+            
+            <ReportForm isOpen={openForm} onClose={() => setOpenForm(false)}/>
+        </>
+            
     )
 }

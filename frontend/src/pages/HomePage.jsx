@@ -9,16 +9,17 @@ export function HomePage(){
     })
     
     return (
-        <div 
+        <div className="flex flex-col justify-center items-center w-full min-h-screen"
         >
-            <MapInteractionCSS
-            value={mapState}
-            onChange={(value) => setMapState(value)}
-            minScale={0.25}
-            maxScale={2.0}
+            home page :D
+            {/* <MapInteractionCSS
+                value={mapState}
+                onChange={(value) => setMapState(value)}
+                minScale={0.25}
+                maxScale={2.0}
             >
-            <div><GameBoard /></div>
-            </MapInteractionCSS>
+                <div className="w-100 h-100"><GameBoard /></div>
+            </MapInteractionCSS> */}
         </div>
     )
 }
