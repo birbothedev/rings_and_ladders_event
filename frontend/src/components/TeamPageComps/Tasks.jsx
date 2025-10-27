@@ -1,6 +1,6 @@
 
 const Tasks = () => {
-    const taskCount = 15
+    const taskCount = 30
     let tasks = []
     for (let i=0; i<taskCount; i++){
         tasks.push(`task ${i+1}`)
