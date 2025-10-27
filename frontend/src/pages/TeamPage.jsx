@@ -1,10 +1,9 @@
-
+import { Dashboard } from "../components/Dashboard";
 
 export function TeamPage(){
     return (
-        <div 
-        >
-            team page :D
+        <div className="p-4">
+            <Dashboard />
         </div>
     )
 }

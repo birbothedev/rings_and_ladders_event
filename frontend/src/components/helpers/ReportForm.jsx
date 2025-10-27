@@ -8,6 +8,7 @@ export function ReportForm({ isOpen, onClose }){
     })
     const [file, setFile] = useState(null)
     const [filePreview, setFilePreview] = useState(null)
+    const [canSubmit, setCanSubmit] = useState(true)
 
     const longlimit = 500
     const shortlimit = 50
@@ -32,7 +33,37 @@ export function ReportForm({ isOpen, onClose }){
         setFilePreview(URL.createObjectURL(selectedFile))
     }
 
+    const handleSubmit = () => {
+        setCanSubmit(false)
+    }
+
     if (!isOpen) return null
+
+    if (!canSubmit) return (
+        <div className="fixed inset-0 backdrop-blur-sm flex justify-center items-center z-110">
+            <div className="w-2xl flex flex-col gap-2">
+                <button className="text-2xl place-self-end cursor-pointer hover:bg-primary/40 rounded-full px-3 pt-1 pb-2 flex text-center items-center justify-center hover:text-darkblue" onClick={onClose}>
+                    ×
+                </button>
+                <div className="bg-border/80 p-4 rounded-2xl flex flex-col gap-.5">
+                <div className="border-primary border-3 rounded-2xl p-4">
+                    <div className="py-4 px-4 pl-1 rounded-full text-3xl font-bold">Report Submitted</div>
+                    <div className="py-4 px-4 pl-1 rounded-full text-xl font-bold">Thank you for your report.</div>
+                    <button className="text-xl place-self-end cursor-pointer hover:bg-primary/40 rounded-full px-3 pt-1 pb-2 flex text-center items-center justify-center hover:text-darkblue" 
+                        onClick={() =>{
+                            setCanSubmit(true)
+                            setFormContent({ username: "", subject: "", description: "" })
+                            setFile(null)
+                            setFilePreview(null)
+                        }}
+                    >
+                            Report Another Issue
+                    </button>
+                </div>
+                </div>
+            </div>
+        </div>
+    )
 
     return (
         <div className="fixed inset-0 backdrop-blur-sm flex justify-center items-center z-110">
@@ -40,9 +71,9 @@ export function ReportForm({ isOpen, onClose }){
                 <button className="text-2xl place-self-end cursor-pointer hover:bg-primary/40 rounded-full px-3 pt-1 pb-2 flex text-center items-center justify-center hover:text-darkblue" onClick={onClose}>
                     ×
                 </button>
-                <div className="bg-border/20 p-4 rounded-2xl flex flex-col gap-4">
+                <div className="bg-border/80 p-4 rounded-2xl flex flex-col gap-4">
                     <div className="py-4 px-4 pl-1 rounded-full text-3xl font-bold">Report an Issue</div>
-                    <form className="border-bordermuted border-3 rounded-2xl p-4 text-md flex flex-col gap-4">
+                    <form className="border-primary border-3 rounded-2xl p-4 text-md flex flex-col gap-4">
                         <>
                             <label className="flex justify-between items-center gap-2">
                                 <span>Discord Username:</span>
@@ -51,7 +82,7 @@ export function ReportForm({ isOpen, onClose }){
                                 </span>
                             </label>
                             <input 
-                                className="border-bordermuted border rounded-2xl p-3" 
+                                className="border-primary border rounded-2xl p-3" 
                                 type="text"
                                 maxLength={shortlimit}
                                 name="username"
@@ -68,7 +99,7 @@ export function ReportForm({ isOpen, onClose }){
                                 </span>
                             </label>
                             <input 
-                                className="border-bordermuted border rounded-2xl p-3" 
+                                className="border-primary border rounded-2xl p-3" 
                                 type="text"
                                 maxLength={shortlimit}
                                 name="subject"
@@ -85,7 +116,7 @@ export function ReportForm({ isOpen, onClose }){
                                 </span>
                             </label>
                             <textarea 
-                                className="border-bordermuted border rounded-2xl p-3 overflow-hidden resize-none" 
+                                className="border-primary border rounded-2xl p-3 overflow-hidden resize-none" 
                                 maxLength={longlimit}
                                 placeholder="Enter a description of the issue"
                                 rows={3}
@@ -99,7 +130,7 @@ export function ReportForm({ isOpen, onClose }){
                                 <span>Upload Image or File:</span>
                             </label>
                             <input 
-                                className="border-bordermuted border rounded-2xl p-3 cursor-pointer" 
+                                className="border-primary border rounded-2xl p-3 cursor-pointer" 
                                 type="file"
                                 name="media"
                                 accept=".png,.jpg,.jpeg,.mp4,.mov,.txt,.log"
@@ -117,7 +148,7 @@ export function ReportForm({ isOpen, onClose }){
                         )}
                     </form>
                     <button className="text-xl place-self-end cursor-pointer hover:bg-primary/40 rounded-full px-3 pt-1 pb-2 flex text-center items-center justify-center hover:text-darkblue" 
-                    onClick={onClose}
+                    onClick={handleSubmit}
                     >
                         Submit
                     </button>
