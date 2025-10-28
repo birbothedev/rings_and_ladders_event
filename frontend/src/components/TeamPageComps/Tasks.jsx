@@ -32,7 +32,6 @@ const Card = ({ title, description, tasks }) => {
                 </div>
             </div>
         </div>
-        
     )
 }
 

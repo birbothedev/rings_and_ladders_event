@@ -44,9 +44,11 @@ body {
 
 .scrollbar-custom::-webkit-scrollbar {
   width: 8px;
+  overscroll-behavior: contain;
 }
 
 .scrollbar-custom::-webkit-scrollbar-thumb {
   background-color: #2563eb;
   border-radius: 9999px;
+  overscroll-behavior: contain;
 }
