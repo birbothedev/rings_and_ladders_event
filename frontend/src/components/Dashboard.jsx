@@ -3,7 +3,7 @@ import { TopBar } from "./DashboardComps/TopBar";
 
 export function Dashboard(){
     return (
-        <div className="bg-bordermuted/60 rounded-lg pb-4 shadow h-[200vh]">
+        <div className="bg-bordermuted/60 rounded-lg pb-4 shadow h-fit">
             <TopBar />
             <Grid />
         </div>
