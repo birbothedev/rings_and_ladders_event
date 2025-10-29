@@ -1,9 +1,9 @@
-import { Dashboard } from "../components/Dashboard";
+import { Dashboard } from "../components/Dashboard"
 
 export function TeamPage(){
     return (
         <div className="p-4">
-            <Dashboard />
+            <Dashboard page={"team"} />
         </div>
     )
 }

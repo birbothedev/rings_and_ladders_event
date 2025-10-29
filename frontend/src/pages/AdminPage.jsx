@@ -1,9 +1,12 @@
+import { Dashboard } from "../components/Dashboard"
+import Sidebar from "../components/Sidebar"
 
 
 export function AdminPage(){
     return (
-        <div className="flex flex-col justify-center items-center w-full min-h-screen">
-            admin page :D
+        <div className="p-4 grid grid-gap-4 grid-cols-[220px_1fr]">
+            <Sidebar />
+                <Dashboard page={"admin"}/>
         </div>
     )
 }
