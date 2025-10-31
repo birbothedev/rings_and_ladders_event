@@ -1,12 +1,31 @@
-export function TopBar(){
+export function TopBar({page, team}){
+
+    const today = new Date()
+
+    const formattedDate = today.toLocaleDateString("en-US", {
+        weekday: "long",
+        year: "numeric",
+        month: "long", 
+        day: "numeric" 
+    })
+
     return (
         <div className="border-b-3 px-4 mb-4 mt-2 pb-4 border-bordermuted p-4">
             <div className="flex items-center justify-between p-0.5">
                 <div>
-                    <span className="text-lg font-bold block">👋 Hello, Team Name!</span>
-                    <span className="text-sm block">Tuesday, October 27th 2025</span>
+                    {page === "team" && 
+                        <>
+                            <span className="text-lg font-bold block">👋 Hello, {team?.teamName || "No team selected"}!</span>
+                            <span className="text-sm block">{formattedDate}</span>
+                        </>
+                    }
+                    {page === "admin" && 
+                        <>
+                            <span className="text-lg font-bold block">{team?.teamName || "No team selected"}</span>
+                            <span className="text-sm block">{formattedDate}</span>
+                        </>
+                    }
                 </div>
-                
             </div>
         </div>
     )

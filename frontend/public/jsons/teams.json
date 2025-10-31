@@ -1,0 +1,104 @@
+{
+    "teams": [
+        {
+            "teamId": "team1",
+            "teamName": "Team One",
+            "teamData": {
+                "teamTasks": "",
+                "teamMissions": "",
+                "teamInventory": "",
+                "teamEffects": ""
+            }
+        },
+        {
+            "teamId": "team2",
+            "teamName": "Team Two",
+            "teamData": {
+                "teamTasks": "",
+                "teamMissions": "",
+                "teamInventory": "",
+                "teamEffects": ""
+            }
+        },
+        {
+            "teamId": "team3",
+            "teamName": "Team Three",
+            "teamData": {
+                "teamTasks": "",
+                "teamMissions": "",
+                "teamInventory": "",
+                "teamEffects": ""
+            }
+        },
+        {
+            "teamId": "team4",
+            "teamName": "Team Four",
+            "teamData": {
+                "teamTasks": "",
+                "teamMissions": "",
+                "teamInventory": "",
+                "teamEffects": ""
+            }
+        },
+        {
+            "teamId": "team5",
+            "teamName": "Team Five",
+            "teamData": {
+                "teamTasks": "",
+                "teamMissions": "",
+                "teamInventory": "",
+                "teamEffects": ""
+            }
+        },
+        {
+            "teamId": "team6",
+            "teamName": "Team Six",
+            "teamData": {
+                "teamTasks": "",
+                "teamMissions": "",
+                "teamInventory": "",
+                "teamEffects": ""
+            }
+        },
+        {
+            "teamId": "team7",
+            "teamName": "Team Seven",
+            "teamData": {
+                "teamTasks": "",
+                "teamMissions": "",
+                "teamInventory": "",
+                "teamEffects": ""
+            }
+        },
+        {
+            "teamId": "team8",
+            "teamName": "Team Eight",
+            "teamData": {
+                "teamTasks": "",
+                "teamMissions": "",
+                "teamInventory": "",
+                "teamEffects": ""
+            }
+        },
+        {
+            "teamId": "team9",
+            "teamName": "Team Nine",
+            "teamData": {
+                "teamTasks": "",
+                "teamMissions": "",
+                "teamInventory": "",
+                "teamEffects": ""
+            }
+        },
+        {
+            "teamId": "team10",
+            "teamName": "Team Ten",
+            "teamData": {
+                "teamTasks": "",
+                "teamMissions": "",
+                "teamInventory": "",
+                "teamEffects": ""
+            }
+        }
+    ]
+}
