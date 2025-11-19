@@ -1,24 +1,18 @@
 import { MapInteractionCSS } from 'react-map-interaction'
 import { GameBoard } from '../components/GameBoard'
-import { useState } from 'react'
+import GridGameboard from '../../../other-stuff/to-be-deleted/GridGameboard'
 
 export function HomePage(){
-    const [mapState, setMapState] = useState({
-        scale: 1,
-        translation: { x: 0, y: 0 }
-    })
     
     return (
         <div className="flex flex-col justify-center items-center w-full min-h-screen">
-            home page :D
-            {/* <MapInteractionCSS
-                value={mapState}
-                onChange={(value) => setMapState(value)}
+            <MapInteractionCSS
                 minScale={0.25}
-                maxScale={2.0}
+                maxScale={5.0}
             >
-                <div className="w-100 h-100"><GameBoard /></div>
-            </MapInteractionCSS> */}
+                <GameBoard />
+                {/* <GridGameboard /> */}
+            </MapInteractionCSS>
         </div>
     )
 }
