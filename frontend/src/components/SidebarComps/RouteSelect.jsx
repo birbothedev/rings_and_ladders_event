@@ -1,11 +1,20 @@
 import { fetchTeamData } from "../Contexts/TeamContext"
+import { useState } from "react"
 
 const RouteSelect = () => {
     const { selectedTeam, setSelectedTeam, teamData, loading, error } = fetchTeamData()
+    const [selectedRoute, setSelectedRoute] = useState("")
 
     if (loading) return <div>Loading...</div>
     if (error) return <div>{error}</div>
     if (!teamData) return <div>no team data</div>
+
+    const setSelectedAsActiveReports = () => {
+        console.log("active reports clicked")
+        setSelectedRoute("Active Reports")
+    }
+
+    // if (selectedRoute === "Active Reports") return <div>Active Reports Shown Here</div>
 
     return (
         <>
@@ -21,14 +30,13 @@ const RouteSelect = () => {
                     />
                 ))}
             </div>
-            {/* <div className="border-t-3 border-bordermuted pt-4 pb-4">
+            <div className="border-t-3 border-bordermuted pt-4 pb-4">
                 <Route 
                     icon={""} 
                     route={"Active Reports"} 
-                    isSelected={selectedRoute === "Active Reports"}
-                    onSelect={setSelectedRoute}
+                    onSelect={setSelectedAsActiveReports}
                 />
-            </div> */}
+            </div>
         </>
     )
 }

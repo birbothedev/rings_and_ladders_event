@@ -15,7 +15,7 @@ export function TopBar({page, team}){
                 <div>
                     {page === "team" && 
                         <>
-                            <span className="text-lg font-bold block">👋 Hello, {team?.teamName || "No team selected"}!</span>
+                            <span className="text-lg font-bold block">👋 Hello, {team || "No team selected"}!</span>
                             <span className="text-sm block">{formattedDate}</span>
                         </>
                     }

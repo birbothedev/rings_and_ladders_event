@@ -3,101 +3,451 @@
         {
             "teamId": "team1",
             "teamName": "Team One",
+            "passphrase": "",
+            "currentTileIndex": 0,
             "teamData": {
-                "teamTasks": "",
-                "teamMissions": "",
-                "teamInventory": "",
-                "teamEffects": ""
+                "teamTasks": {
+                    "easy": [
+                        {
+                            "taskId": "",
+                            "description": "",
+                            "diceCount": 1,
+                            "completed": false
+                        }
+                    ],
+                    "medium": [
+                        {
+                            "taskId": "",
+                            "description": "",
+                            "diceCount": 2,
+                            "completed": false
+                        }
+                    ],
+                    "hard": [
+                        {
+                            "taskId": "",
+                            "description": "",
+                            "diceCount": 3,
+                            "completed": false
+                        }
+                    ],
+                    "master": [
+                        {
+                            "taskId": "",
+                            "description": "",
+                            "diceCount": 4,
+                            "completed": false
+                        }
+                    ]
+                },
+                "teamImplings": [],
+                "teamInventory": [],
+                "teamEffects": []
             }
         },
         {
             "teamId": "team2",
             "teamName": "Team Two",
+            "passphrase": "",
+            "currentTileIndex": 0,
             "teamData": {
-                "teamTasks": "",
-                "teamMissions": "",
-                "teamInventory": "",
-                "teamEffects": ""
+                "teamTasks": {
+                    "easy": [
+                        {
+                            "taskId": "",
+                            "description": "",
+                            "diceCount": 1,
+                            "completed": false
+                        }
+                    ],
+                    "medium": [
+                        {
+                            "taskId": "",
+                            "description": "",
+                            "diceCount": 2,
+                            "completed": false
+                        }
+                    ],
+                    "hard": [
+                        {
+                            "taskId": "",
+                            "description": "",
+                            "diceCount": 3,
+                            "completed": false
+                        }
+                    ],
+                    "master": [
+                        {
+                            "taskId": "",
+                            "description": "",
+                            "diceCount": 4,
+                            "completed": false
+                        }
+                    ]
+                },
+                "teamImplings": [],
+                "teamInventory": [],
+                "teamEffects": []
             }
         },
         {
             "teamId": "team3",
             "teamName": "Team Three",
+            "passphrase": "",
+            "currentTileIndex": 0,
             "teamData": {
-                "teamTasks": "",
-                "teamMissions": "",
-                "teamInventory": "",
-                "teamEffects": ""
+                "teamTasks": {
+                    "easy": [
+                        {
+                            "taskId": "",
+                            "description": "",
+                            "diceCount": 1,
+                            "completed": false
+                        }
+                    ],
+                    "medium": [
+                        {
+                            "taskId": "",
+                            "description": "",
+                            "diceCount": 2,
+                            "completed": false
+                        }
+                    ],
+                    "hard": [
+                        {
+                            "taskId": "",
+                            "description": "",
+                            "diceCount": 3,
+                            "completed": false
+                        }
+                    ],
+                    "master": [
+                        {
+                            "taskId": "",
+                            "description": "",
+                            "diceCount": 4,
+                            "completed": false
+                        }
+                    ]
+                },
+                "teamImplings": [],
+                "teamInventory": [],
+                "teamEffects": []
             }
         },
         {
             "teamId": "team4",
             "teamName": "Team Four",
+            "passphrase": "",
+            "currentTileIndex": 0,
             "teamData": {
-                "teamTasks": "",
-                "teamMissions": "",
-                "teamInventory": "",
-                "teamEffects": ""
+                "teamTasks": {
+                    "easy": [
+                        {
+                            "taskId": "",
+                            "description": "",
+                            "diceCount": 1,
+                            "completed": false
+                        }
+                    ],
+                    "medium": [
+                        {
+                            "taskId": "",
+                            "description": "",
+                            "diceCount": 2,
+                            "completed": false
+                        }
+                    ],
+                    "hard": [
+                        {
+                            "taskId": "",
+                            "description": "",
+                            "diceCount": 3,
+                            "completed": false
+                        }
+                    ],
+                    "master": [
+                        {
+                            "taskId": "",
+                            "description": "",
+                            "diceCount": 4,
+                            "completed": false
+                        }
+                    ]
+                },
+                "teamImplings": [],
+                "teamInventory": [],
+                "teamEffects": []
             }
         },
         {
             "teamId": "team5",
             "teamName": "Team Five",
+            "passphrase": "",
+            "currentTileIndex": 0,
             "teamData": {
-                "teamTasks": "",
-                "teamMissions": "",
-                "teamInventory": "",
-                "teamEffects": ""
+                "teamTasks": {
+                    "easy": [
+                        {
+                            "taskId": "",
+                            "description": "",
+                            "diceCount": 1,
+                            "completed": false
+                        }
+                    ],
+                    "medium": [
+                        {
+                            "taskId": "",
+                            "description": "",
+                            "diceCount": 2,
+                            "completed": false
+                        }
+                    ],
+                    "hard": [
+                        {
+                            "taskId": "",
+                            "description": "",
+                            "diceCount": 3,
+                            "completed": false
+                        }
+                    ],
+                    "master": [
+                        {
+                            "taskId": "",
+                            "description": "",
+                            "diceCount": 4,
+                            "completed": false
+                        }
+                    ]
+                },
+                "teamImplings": [],
+                "teamInventory": [],
+                "teamEffects": []
             }
         },
         {
             "teamId": "team6",
             "teamName": "Team Six",
+            "passphrase": "",
+            "currentTileIndex": 0,
             "teamData": {
-                "teamTasks": "",
-                "teamMissions": "",
-                "teamInventory": "",
-                "teamEffects": ""
+                "teamTasks": {
+                    "easy": [
+                        {
+                            "taskId": "",
+                            "description": "",
+                            "diceCount": 1,
+                            "completed": false
+                        }
+                    ],
+                    "medium": [
+                        {
+                            "taskId": "",
+                            "description": "",
+                            "diceCount": 2,
+                            "completed": false
+                        }
+                    ],
+                    "hard": [
+                        {
+                            "taskId": "",
+                            "description": "",
+                            "diceCount": 3,
+                            "completed": false
+                        }
+                    ],
+                    "master": [
+                        {
+                            "taskId": "",
+                            "description": "",
+                            "diceCount": 4,
+                            "completed": false
+                        }
+                    ]
+                },
+                "teamImplings": [],
+                "teamInventory": [],
+                "teamEffects": []
             }
         },
         {
             "teamId": "team7",
             "teamName": "Team Seven",
+            "passphrase": "",
+            "currentTileIndex": 0,
             "teamData": {
-                "teamTasks": "",
-                "teamMissions": "",
-                "teamInventory": "",
-                "teamEffects": ""
+                "teamTasks": {
+                    "easy": [
+                        {
+                            "taskId": "",
+                            "description": "",
+                            "diceCount": 1,
+                            "completed": false
+                        }
+                    ],
+                    "medium": [
+                        {
+                            "taskId": "",
+                            "description": "",
+                            "diceCount": 2,
+                            "completed": false
+                        }
+                    ],
+                    "hard": [
+                        {
+                            "taskId": "",
+                            "description": "",
+                            "diceCount": 3,
+                            "completed": false
+                        }
+                    ],
+                    "master": [
+                        {
+                            "taskId": "",
+                            "description": "",
+                            "diceCount": 4,
+                            "completed": false
+                        }
+                    ]
+                },
+                "teamImplings": [],
+                "teamInventory": [],
+                "teamEffects": []
             }
         },
         {
             "teamId": "team8",
             "teamName": "Team Eight",
+            "passphrase": "",
+            "currentTileIndex": 0,
             "teamData": {
-                "teamTasks": "",
-                "teamMissions": "",
-                "teamInventory": "",
-                "teamEffects": ""
+                "teamTasks": {
+                    "easy": [
+                        {
+                            "taskId": "",
+                            "description": "",
+                            "diceCount": 1,
+                            "completed": false
+                        }
+                    ],
+                    "medium": [
+                        {
+                            "taskId": "",
+                            "description": "",
+                            "diceCount": 2,
+                            "completed": false
+                        }
+                    ],
+                    "hard": [
+                        {
+                            "taskId": "",
+                            "description": "",
+                            "diceCount": 3,
+                            "completed": false
+                        }
+                    ],
+                    "master": [
+                        {
+                            "taskId": "",
+                            "description": "",
+                            "diceCount": 4,
+                            "completed": false
+                        }
+                    ]
+                },
+                "teamImplings": [],
+                "teamInventory": [],
+                "teamEffects": []
             }
         },
         {
             "teamId": "team9",
             "teamName": "Team Nine",
+            "passphrase": "",
+            "currentTileIndex": 0,
             "teamData": {
-                "teamTasks": "",
-                "teamMissions": "",
-                "teamInventory": "",
-                "teamEffects": ""
+                "teamTasks": {
+                    "easy": [
+                        {
+                            "taskId": "",
+                            "description": "",
+                            "diceCount": 1,
+                            "completed": false
+                        }
+                    ],
+                    "medium": [
+                        {
+                            "taskId": "",
+                            "description": "",
+                            "diceCount": 2,
+                            "completed": false
+                        }
+                    ],
+                    "hard": [
+                        {
+                            "taskId": "",
+                            "description": "",
+                            "diceCount": 3,
+                            "completed": false
+                        }
+                    ],
+                    "master": [
+                        {
+                            "taskId": "",
+                            "description": "",
+                            "diceCount": 4,
+                            "completed": false
+                        }
+                    ]
+                },
+                "teamImplings": [],
+                "teamInventory": [],
+                "teamEffects": []
             }
         },
         {
             "teamId": "team10",
             "teamName": "Team Ten",
+            "passphrase": "",
+            "currentTileIndex": 0,
             "teamData": {
-                "teamTasks": "",
-                "teamMissions": "",
-                "teamInventory": "",
-                "teamEffects": ""
+                "teamTasks": {
+                    "easy": [
+                        {
+                            "taskId": "",
+                            "description": "",
+                            "diceCount": 1,
+                            "completed": false
+                        }
+                    ],
+                    "medium": [
+                        {
+                            "taskId": "",
+                            "description": "",
+                            "diceCount": 2,
+                            "completed": false
+                        }
+                    ],
+                    "hard": [
+                        {
+                            "taskId": "",
+                            "description": "",
+                            "diceCount": 3,
+                            "completed": false
+                        }
+                    ],
+                    "master": [
+                        {
+                            "taskId": "",
+                            "description": "",
+                            "diceCount": 4,
+                            "completed": false
+                        }
+                    ]
+                },
+                "teamImplings": [],
+                "teamInventory": [],
+                "teamEffects": []
             }
         }
     ]

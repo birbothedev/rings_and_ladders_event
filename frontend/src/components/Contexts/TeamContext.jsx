@@ -13,7 +13,6 @@ export function TeamFetch({children}){
             try {
                 const response = await fetch("/jsons/teams.json", {
                     method: "GET",
-                    credentials: "include"
                 })
                 const teamsJson = await response.json()
                 setTeamData(teamsJson.teams)

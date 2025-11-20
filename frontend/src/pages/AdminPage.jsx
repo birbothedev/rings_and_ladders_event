@@ -3,7 +3,6 @@ import { Dashboard } from "../components/Dashboard"
 import Sidebar from "../components/Sidebar"
 import { fetchTeamData } from "../components/Contexts/TeamContext"
 
-
 export function AdminPage(){
     const [selectedRoute, setSelectedRoute] = useState("")
     const { teamData, loading, error } = fetchTeamData()
@@ -13,7 +12,7 @@ export function AdminPage(){
     if (!teamData) return <div>no team data</div>
 
     return (
-        <div className="p-4 grid grid-gap-4 grid-cols-[220px_1fr]">
+        <div className="p-4 pt-20 grid grid-gap-4 grid-cols-[220px_1fr]">
             <Sidebar selectedRoute={selectedRoute} setSelectedRoute={setSelectedRoute} teamData={teamData}/>
             <Dashboard page={"admin"} selectedRoute={selectedRoute} teamData={teamData}/>
         </div>

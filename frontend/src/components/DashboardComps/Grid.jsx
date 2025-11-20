@@ -6,6 +6,9 @@ import { StatusEffects } from './StatusEffects'
 import Tasks from './Tasks'
 
 const Grid = ({page, team}) => {
+
+    if (!team) return <div className="p-4">No Team Selected.</div>
+
     return (
         <div className="px-4 grid gap-3 grid-cols-12">
             {

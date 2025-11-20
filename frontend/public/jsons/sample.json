@@ -1,14 +1,45 @@
 {
-    "tiles": [
-        {
-            "tileId": "id",
-            "tileCoords": {
-                "tileX": 0,
-                "tileY": 0
-            },
-            "tileData": {
-
-            }
-        }
-    ]
+    "teamId": "team1",
+    "teamName": "Team One",
+    "passphrase": "",
+    "currentTileIndex": 0,
+    "teamData": {
+        "teamTasks": {
+            "easy": [
+                {
+                    "taskId": "",
+                    "description": "",
+                    "diceCount": 1,
+                    "completed": false
+                }
+            ],
+            "medium": [
+                {
+                    "taskId": "",
+                    "description": "",
+                    "diceCount": 2,
+                    "completed": false
+                }
+            ],
+            "hard": [
+                {
+                    "taskId": "",
+                    "description": "",
+                    "diceCount": 3,
+                    "completed": false
+                }
+            ],
+            "master": [
+                {
+                    "taskId": "",
+                    "description": "",
+                    "diceCount": 4,
+                    "completed": false
+                }
+            ]
+        },
+        "teamImplings": [],
+        "teamInventory": [],
+        "teamEffects": []
+    }
 }

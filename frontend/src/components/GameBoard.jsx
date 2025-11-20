@@ -1,21 +1,16 @@
-import { Tile } from "./helpers/Tile"
+import { fetchAllTiles } from "./Contexts/TileContext"
 import BoardSVG from "../assets/gameboard.svg?react"
 import { useEffect, useRef, useState } from "react"
 
 export function GameBoard(){
-    const pathRef = useRef(null)
     const svgRef = useRef(null)
-    const [points, setPoints] = useState([])
+    const { loading, error,  homeData} = fetchAllTiles()
 
-    useEffect(() => {
-        if (!svgRef.current) return
-        pathRef.current = svgRef.current.querySelector("#gamePath")
+    if (loading) return <div>Loading...</div>
+    if (error) return <div>{error}</div>
+    if (!homeData) return <div>no tile point data</div>
 
-        if (!pathRef.current) return
-        const pts = getEvenlySpacedPoints(pathRef.current, 500)
-        setPoints(pts)
-    }, [])
-
+    const points = homeData.tiles
 
     return (
         <div className="relative w-full h-full">
@@ -26,24 +21,45 @@ export function GameBoard(){
             
             <svg className="absolute top-0 left-0 w-full h-full" viewBox="0 0 1440 809.999993">
                 {points.map((p,i)=>(
-                        <circle key={i} cx={p.x} cy={p.y} r={6} fill="yellow"/>
+                <g key={i}>
+                    <circle
+                        className="cursor-pointer"
+                        cx={p.pos.x}
+                        cy={p.pos.y}
+                        r={6}
+                        fill={p.data.fairyRing ? "cyan" : "yellow"}
+                    />
+                    <text
+                        x={p.pos.x}
+                        y={p.pos.y + 2} 
+                        fontSize="6"
+                        textAnchor="middle"
+                        alignmentBaseline="middle"
+                        fill="black"
+                        pointerEvents="none"
+                    >
+                        {i}
+                    </text>
+                </g>
                 ))}
             </svg>
         </div>    
     )
 }
 
-function getEvenlySpacedPoints(path, count) {
-    // divide total length by 2 because it loops around the line
-    const length = (path.getTotalLength() / 2)
-    const points = []
-    const offset = 0.0001
+// function getEvenlySpacedPoints(path, count) {
+//     // divide total length by 2 because it loops around the line
+//     const length = (path.getTotalLength() / 2)
+//     const points = []
+//     const offset = 0.0001
 
-    for (let i = 0; i < count; i++) {
-        const distance = (length * i) / count  + offset
-        const point = path.getPointAtLength(distance)
-        points.push({ x: point.x, y: point.y })
-    }
+//     for (let i = 0; i < count; i++) {
+//         const distance = (length * i) / count  + offset
+//         const point = path.getPointAtLength(distance)
+//         const isFairy = ((i + 1) % 10 === 0) && (i !== (count - 1))
 
-    return points
-}
+//         points.push({ tile: i, pos: { x: point.x, y: point.y }, data: {fairyRing: isFairy} })
+//     }
+
+//     return points
+// }

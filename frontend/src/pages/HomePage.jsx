@@ -1,6 +1,7 @@
 import { MapInteractionCSS } from 'react-map-interaction'
 import { GameBoard } from '../components/GameBoard'
-import GridGameboard from '../../../other-stuff/to-be-deleted/GridGameboard'
+import GridGameboard from '../components/GridGameboard'
+import { TileFetch } from '../components/Contexts/TileContext'
 
 export function HomePage(){
     
@@ -10,8 +11,9 @@ export function HomePage(){
                 minScale={0.25}
                 maxScale={5.0}
             >
-                <GameBoard />
-                {/* <GridGameboard /> */}
+                <TileFetch>
+                    <GameBoard />
+                </TileFetch>
             </MapInteractionCSS>
         </div>
     )
