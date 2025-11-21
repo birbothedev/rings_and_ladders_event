@@ -19,7 +19,7 @@ const Grid = ({page, team}) => {
                 </>
             }
             
-            <Tasks team={team?.teamData?.teamTasks || "No team selected"}/>
+            <Tasks tasks={team?.teamData?.teamTasks || "No team selected"}/>
             <BonusMissions team={team?.teamData?.teamMissions || "No team selected"}/>
             <Inventory team={team?.teamData?.teamInventory || "No team selected"}/> 
             <StatusEffects team={team?.teamData?.teamEffects || "No team selected"}/>

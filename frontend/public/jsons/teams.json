@@ -10,7 +10,109 @@
                     "easy": [
                         {
                             "taskId": "",
-                            "description": "",
+                            "description": "this is a task 1",
+                            "diceCount": 1,
+                            "completed": true
+                        },
+                        {
+                            "taskId": "",
+                            "description": "this is a task 2",
+                            "diceCount": 1,
+                            "completed": false
+                        },
+                        {
+                            "taskId": "",
+                            "description": "this is a task 3",
+                            "diceCount": 1,
+                            "completed": true
+                        },
+                        {
+                            "taskId": "",
+                            "description": "this is a task 4",
+                            "diceCount": 1,
+                            "completed": false
+                        },
+                        {
+                            "taskId": "",
+                            "description": "this is a task 3",
+                            "diceCount": 1,
+                            "completed": false
+                        },
+                        {
+                            "taskId": "",
+                            "description": "this is a task 3",
+                            "diceCount": 1,
+                            "completed": false
+                        },
+                        {
+                            "taskId": "",
+                            "description": "this is a task 3",
+                            "diceCount": 1,
+                            "completed": true
+                        },
+                        {
+                            "taskId": "",
+                            "description": "this is a task 3",
+                            "diceCount": 1,
+                            "completed": false
+                        },
+                        {
+                            "taskId": "",
+                            "description": "this is a task 3",
+                            "diceCount": 1,
+                            "completed": true
+                        },
+                        {
+                            "taskId": "",
+                            "description": "this is a task 3",
+                            "diceCount": 1,
+                            "completed": false
+                        },
+                        {
+                            "taskId": "",
+                            "description": "this is a task 3",
+                            "diceCount": 1,
+                            "completed": false
+                        },
+                        {
+                            "taskId": "",
+                            "description": "this is a task 3",
+                            "diceCount": 1,
+                            "completed": true
+                        },
+                        {
+                            "taskId": "",
+                            "description": "this is a task 3",
+                            "diceCount": 1,
+                            "completed": false
+                        },
+                        {
+                            "taskId": "",
+                            "description": "this is a task 3",
+                            "diceCount": 1,
+                            "completed": false
+                        },
+                        {
+                            "taskId": "",
+                            "description": "this is a task 3",
+                            "diceCount": 1,
+                            "completed": false
+                        },
+                        {
+                            "taskId": "",
+                            "description": "this is a task 3",
+                            "diceCount": 1,
+                            "completed": false
+                        },
+                        {
+                            "taskId": "",
+                            "description": "this is a task 3",
+                            "diceCount": 1,
+                            "completed": false
+                        },
+                        {
+                            "taskId": "",
+                            "description": "this is a task 3",
                             "diceCount": 1,
                             "completed": false
                         }

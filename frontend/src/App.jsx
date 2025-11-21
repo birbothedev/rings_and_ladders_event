@@ -4,6 +4,7 @@ import { HomePage } from './pages/HomePage'
 import { TeamPage } from './pages/TeamPage'
 import { AdminPage } from './pages/AdminPage'
 import { TeamFetch } from './components/Contexts/TeamContext'
+import { IndividualTeamFetch } from './components/Contexts/IndividualTeamContext'
 
 function App() {
   return (
@@ -14,7 +15,13 @@ function App() {
 
       <Route path="/" element={<HomePage />} />
 
-      <Route path="/teampage" element={<TeamPage />} />
+      <Route path="/teampage" 
+        element={
+          <IndividualTeamFetch>
+            <TeamPage />
+          </IndividualTeamFetch>
+        } 
+      />
 
       <Route path="/adminpage" 
         element={
