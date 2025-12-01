@@ -1,6 +1,5 @@
 import { MapInteractionCSS } from 'react-map-interaction'
 import { GameBoard } from '../components/GameBoard'
-import GridGameboard from '../components/GridGameboard'
 import { TileFetch } from '../components/Contexts/TileContext'
 
 export function HomePage(){

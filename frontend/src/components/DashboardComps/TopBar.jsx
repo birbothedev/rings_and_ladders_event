@@ -1,4 +1,4 @@
-export function TopBar({page, team}){
+export function TopBar({page, team, activeReports}){
 
     const today = new Date()
 
@@ -19,9 +19,15 @@ export function TopBar({page, team}){
                             <span className="text-sm block">{formattedDate}</span>
                         </>
                     }
-                    {page === "admin" && 
+                    {page === "admin" && !activeReports && 
                         <>
                             <span className="text-lg font-bold block">{team?.teamName || "No team selected"}</span>
+                            <span className="text-sm block">{formattedDate}</span>
+                        </>
+                    }
+                    {activeReports &&
+                        <>
+                            <span className="text-lg font-bold block">Active Reports</span>
                             <span className="text-sm block">{formattedDate}</span>
                         </>
                     }

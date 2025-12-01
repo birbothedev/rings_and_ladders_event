@@ -1,13 +1,20 @@
 import ActionFeed from '../InfoComps/ActionFeed'
 import Updates from '../InfoComps/Updates'
+import ActiveReports from './ActiveReports'
 import BonusMissions from './BonusMissions'
 import { Inventory } from './Inventory'
 import { StatusEffects } from './StatusEffects'
 import Tasks from './Tasks'
 
-const Grid = ({page, team}) => {
+const Grid = ({page, team, activeReports}) => {
 
     if (!team) return <div className="p-4">No Team Selected.</div>
+    
+    if (activeReports) return (
+        <div>
+            <ActiveReports />
+        </div>
+    )
 
     return (
         <div className="px-4 grid gap-3 grid-cols-12">
