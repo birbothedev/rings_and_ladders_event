@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { FiMaximize2, FiXCircle } from "react-icons/fi"
 
 const Updates = () => {
     const [expanded, setIsExpanded] = useState(false)
@@ -6,8 +7,8 @@ const Updates = () => {
     if (expanded) return (
         <div className="fixed inset-0 backdrop-blur-sm flex justify-center items-center z-110">
             <div className="w-2xl flex flex-col gap-2">
-                <button className="text-2xl place-self-end cursor-pointer hover:bg-primary/40 rounded-full px-3 pt-1 pb-2 flex text-center items-center justify-center hover:text-darkblue" onClick={() => setIsExpanded(false)}>
-                    ×
+                <button className="text-2xl place-self-end cursor-pointer px-3 pt-1 pb-2 flex text-center items-center justify-center hover:text-textmuted" onClick={() => setIsExpanded(false)}>
+                    <FiXCircle />
                 </button>
                 <div className="bg-border/80 p-4 rounded-2xl flex flex-col gap-4">
                     <div className="py-4 px-4 pl-1 rounded-full text-3xl font-bold">Updates and Announcements</div>
@@ -29,10 +30,10 @@ const Updates = () => {
             <div className="flex justify-between">
                 <span className="text-xl ">Updates and Announcements</span>
                 <button 
-                className="place-self-end hover:text-textmuted cursor-pointer"
+                className="place-self-end hover:text-textmuted cursor-pointer p-4 pr-0"
                 onClick={() => setIsExpanded(prev => !prev)}
                 >
-                    Expand
+                    <FiMaximize2 />
                 </button>
             </div>
                 <span className="text-md max-h-12 overflow-auto scrollbar-custom">

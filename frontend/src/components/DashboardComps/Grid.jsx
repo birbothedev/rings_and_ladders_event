@@ -1,6 +1,6 @@
 import ActionFeed from '../InfoComps/ActionFeed'
 import Updates from '../InfoComps/Updates'
-import ActiveReports from './ActiveReports'
+import ActiveReports from './ActiveReports/ActiveReports'
 import BonusMissions from './BonusMissions'
 import { Inventory } from './Inventory'
 import { StatusEffects } from './StatusEffects'
