@@ -7,9 +7,9 @@ const OpenActiveReports = ({ isOpen, onClose, setIsReportComplete, isCompleted }
     useEffect(() => {
         if (isOpen) {
             setIsChecked(isCompleted)  
-            console.log(`report completion: ${isCompleted}`)
+            console.log(`report completion in open comp: ${isCompleted}`)
         }
-    }, [isOpen])
+    }, [isOpen, isCompleted])
 
     const handleSubmit = () => {
         setIsReportComplete(isChecked)

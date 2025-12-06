@@ -43,8 +43,8 @@ export function ReportForm({ isOpen, onClose }){
     if (!canSubmit) return (
         <div className="fixed inset-0 backdrop-blur-sm flex justify-center items-center z-110">
             <div className="w-2xl flex flex-col gap-2">
-                <button className="text-2xl place-self-end cursor-pointer hover:bg-primary/40 rounded-full px-3 pt-1 pb-2 flex text-center items-center justify-center hover:text-darkblue" onClick={onClose}>
-                    ×
+                <button className="text-2xl place-self-end cursor-pointer px-3 pt-1 pb-2 flex text-center items-center justify-center hover:text-textmuted" onClick={onClose}>
+                    <FiXCircle />
                 </button>
                 <div className="bg-border/80 p-4 rounded-2xl flex flex-col gap-.5">
                 <div className="border-primary border-3 rounded-2xl p-4">

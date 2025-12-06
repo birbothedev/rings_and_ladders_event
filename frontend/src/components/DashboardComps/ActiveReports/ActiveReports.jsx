@@ -1,24 +1,35 @@
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import OpenActiveReports from "./OpenActiveReports"
 
 const ActiveReports = () => {
     const [showCompleted, setShowCompleted] = useState(false)
     const [isReportComplete, setIsReportComplete] = useState(false)
     const [openForm, setOpenForm] = useState(false)
-    const reports = []
-    const reportCount = 25
-    let currentIndex = 0
+    const [selectedReportIndex, setSelectedReportIndex] = useState(null)
 
-    for (let i=0; i < reportCount; i++){
-        currentIndex++
-        reports.push({
-            name: `report number ${i + 1}`,
-            description: "this is a description of a report",
-            username: "username",
-            completed: false
+    const [reports, setReports] = useState(() => {
+        const initial = []
+        for (let i = 0; i < 25; i++) {
+            initial.push({
+                name: `report ${i + 1} subject line here`,
+                description: "this is a description of a report",
+                username: "username",
+                completed: false
+            })
+        }
+        return initial
+    })
+
+    const handleReportCompletion = (value) => {
+        setReports(prev => {
+            const updated = [...prev]
+            updated[selectedReportIndex] = {
+                ...updated[selectedReportIndex],
+                completed: value
+            }
+            return updated
         })
     }
-
 
     return (
         <>
@@ -30,19 +41,31 @@ const ActiveReports = () => {
                 {showCompleted ? "Hide Completed" : "Show Completed"}
             </button>
             <div className="p-4 space-y-4 flex flex-col grid-cols-1">
-                {reports.map((report, index) => (
-                    <div 
-                        key={index}
-                        className="p-4 border-3 border-border rounded-lg cursor-pointer hover:border-bordermuted col-span-1"
-                        onClick={() => setOpenForm(true)}
-                    >
-                        {report.name}
-                    </div>
-                ))}
+                {reports
+                    .filter(report => showCompleted || !report.completed)
+                    .map((report, index) => {
+                        const realIndex = reports.indexOf(report)
+                        return (
+                            <div 
+                                key={realIndex}
+                                className={`p-4 border-3 border-border rounded-lg cursor-pointer hover:border-bordermuted col-span-1
+                                ${report.completed ? "line-through opacity-60" : ""}`}
+                                onClick={() => (
+                                    setOpenForm(true),
+                                    setSelectedReportIndex(realIndex),
+                                    setIsReportComplete(report.completed),
+                                    console.log(`report completion in report comp: ${report.completed}`)
+                                )}
+                            >
+                                {report.name}
+                            </div>
+                        )
+                        
+                    })}
             </div>
         </div>
 
-        <OpenActiveReports isOpen={openForm} onClose={() => setOpenForm(false)} isCompleted={isReportComplete} setIsReportComplete={setIsReportComplete}/>
+        <OpenActiveReports isOpen={openForm} onClose={() => setOpenForm(false)} isCompleted={isReportComplete} setIsReportComplete={handleReportCompletion}/>
         </>
     )
 }
