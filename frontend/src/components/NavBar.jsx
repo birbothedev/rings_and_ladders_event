@@ -1,5 +1,6 @@
 import { ReportForm } from "./helpers/ReportForm"
 import { useState } from "react"
+import { Link } from "react-router-dom"
 
 const listItems = [
     {title: 'Home', link: "/"},
@@ -22,7 +23,7 @@ export function NavBar(){
             <ul className="flex gap-8 text-xl">
                 {listItems.map((item) => (
                     <li className="relative group cursor-pointer " key={item.title}>
-                        <a href={item.link}>{item.title}</a> 
+                        <Link to={item.link}>{item.title}</Link> 
                         <span className="absolute left-0 bottom-[-5px] w-0 h-1 rounded-xl bg-linear-to-l from-success to-info transition-all duration-300 group-hover:w-full "></span>
                     </li>
                 ))}

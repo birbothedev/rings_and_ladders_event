@@ -9,7 +9,7 @@ import { IndividualTeamFetch } from './components/Contexts/IndividualTeamContext
 function App() {
   return (
   <>
-  <BrowserRouter>
+  <div>
     <NavBar />
     <Routes>
 
@@ -32,7 +32,7 @@ function App() {
       />
 
     </Routes>
-  </BrowserRouter>
+      </div>
   </>
   )
 }
